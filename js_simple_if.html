@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BMI Calc</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <title>BMI Calc</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+        .card-content {
+            background-color: #f9f6f6;
+            border: none;
+
+        }
+
+        .input {
+            border-width: 1px;
+            border-radius: 15px;
+        }
+        .table {
+            font-family: 'Open Sans', sans-serif;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="column">
+        <section class="hero has-background-primary-dark">
+            <div class="hero-body has-text-centered ">
+                <p class="title has-text-white">
+                    BMI Calculator
+                </p>
+                <p class="subtitle ">
+                    Christina Tomter
+                </p>
+            </div>
+        </section>
+    </div>
+    <div class="columns is-8">
+
+        <div class="column is-one-fifth is-offset-one-quarter">
+
+            <div class="column">
+                <div class="card">
+                    <div class="card-content">
+
+                        <form name="BMIForm" onsubmit="return false">
+                            <div class="field-label is-medium mb-5 has-text-left">
+                                <label>Please enter your height and weight</label>
+                            </div>
+                            <div class="field">
+                                <label class="label is-normal">Height in inches</label>
+                                <div class="control">
+                                    <input class="input is-rounded" type="text" placeholder="Text input" id="height"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label  is-normal">Weight in lbs</label>
+                                <div class="control">
+                                    <input class="input is-rounded" type="text" placeholder="Text input" id="weight"
+                                        required>
+                                </div>
+                            </div>
+
+
+                            <div class="field is-grouped">
+                                <button type=“submit” class="button is-primary is-large is-rounded m-2"
+                                    id="submitBMI">Go</button>
+                                <button type="reset" class="button is-large is-rounded is-danger is-light m-2"
+                                    onclick="reset" id="clearAll">Reset</button>
+                            </div>
+                            <div class="field">
+                                <label class="label">Your BMI is:</label>
+                                <div class="control">
+                                    <input class="input is-rounded is-normal" type="text" id="metricBMI" disabled>
+                                </div>
+                            </div>
+
+
+                            <div id=labelBMI></div>
+                            <div id=BMIMessage></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+        <div class="column column is-one-fifth is-offset-1">
+
+            <table class="table is-bordered is-size-5">
+                <thead>
+                    <tr>
+                        <th colspan="2">BMI Table</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="underweight">
+                        <td>Underweight</td>
+                        <td>Less than 18.5</td>
+                    </tr>
+                    <tr id="normal">
+                        <td>Normal Weight</td>
+                        <td>18.5-24.9</td>
+                    </tr>
+                    <tr id="overweight">
+                        <td>Overight Weight</td>
+                        <td>25-29.9</td>
+                    </tr>
+                    <tr id="obese">
+                        <td>Obese Weight</td>
+                        <td>Greater than 30</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+
+
+
+</html>
